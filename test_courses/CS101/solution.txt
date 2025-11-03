@@ -1,0 +1,10 @@
+
+    Problem 1: Explain DFS and BFS.
+    
+    Solution:
+    DFS goes deep first using stack. BFS goes wide first using queue.
+    
+    Problem 2: Time complexity.
+    
+    Both are O(V + E) for vertices V and edges E.
+    

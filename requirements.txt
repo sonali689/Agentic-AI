@@ -1,0 +1,40 @@
+# Core AI/ML
+langchain>=0.1.0
+langchain-community>=0.0.10
+groq>=0.3.0
+transformers>=4.30.0
+torch>=2.0.0
+peft>=0.4.0
+accelerate>=0.21.0
+
+# Document Processing
+pypdf>=3.0.0
+python-docx>=1.0.0
+pdf2image>=1.16.0
+pytesseract>=0.3.10
+
+# Vector Database
+chromadb>=0.4.0
+sentence-transformers>=2.2.0
+
+# Web Interface
+gradio>=4.0.0
+
+# Utilities
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+PyYAML>=6.0.0
+pathlib>=1.0.0
+
+# Development
+pytest>=7.0.0
+
+# Fine-tuning specific dependencies
+torch>=2.0.0
+transformers>=4.30.0
+accelerate>=0.21.0
+peft>=0.4.0
+bitsandbytes>=0.41.0
+datasets>=2.10.0
+trl>=0.7.0
+evaluate>=0.4.0

@@ -1,0 +1,12 @@
+ui:
+  theme: "soft"
+  server_port: 7860
+  server_name: "0.0.0.0"
+  share: false
+  debug: true
+
+features:
+  file_upload: true
+  multiple_courses: true
+  latex_download: true
+  real_time_preview: true

@@ -1,0 +1,13 @@
+
+    # CS101: Data Structures and Algorithms
+    
+    ## Graph Traversal Algorithms
+    
+    Depth-First Search (DFS) and Breadth-First Search (BFS) are fundamental graph traversal algorithms.
+    
+    DFS explores as far as possible along each branch before backtracking. It uses a stack data structure.
+    
+    BFS explores all neighbors at the present depth before moving deeper. It uses a queue data structure.
+    
+    Time Complexity: Both algorithms have time complexity O(V + E) where V is vertices and E is edges.
+    

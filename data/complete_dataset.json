@@ -1,0 +1,626 @@
+[
+{
+"problem": "Solve the system of linear equations: 2x + 3y = 7 and x - y = 1.",
+"text_solution": "From the second equation, x = y + 1. Substitute into the first: 2(y + 1) + 3y = 7, so 2y + 2 + 3y = 7, giving 5y = 5 and y = 1. Then x = 1 + 1 = 2.",
+"latex_solution": "Solve the system $\\begin{cases}2x+3y=7,\\\\ x-y=1.\\end{cases}$\\\\\\n\\textbf{Solution.} From $x-y=1$ we get $x=y+1$. Substitute into $2x+3y=7$ to obtain $2(y+1)+3y=7$, hence $5y=5$ and $y=1$. Therefore $x=2$.\\\\ Thus, $(x,y)=(2,1)$.",
+"topic": "algebra",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Solve the inequality |2x - 3| < 5.",
+"text_solution": "The inequality |2x - 3| < 5 means -5 < 2x - 3 < 5. Add 3 to get -2 < 2x < 8. Divide by 2 to get -1 < x < 4.",
+"latex_solution": "We solve $\\lvert 2x-3\\rvert<5$. This is equivalent to $-5<2x-3<5$. Adding $3$ yields $-2<2x<8$. Dividing by $2$ gives $-1<x<4$.\\\\ Hence the solution set is $(-1,4)$.",
+"topic": "algebra",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Solve for x: log_3(x) + log_3(x - 2) = 2.",
+"text_solution": "Combine logs: log_3(x(x - 2)) = 2, so x(x - 2) = 3^2 = 9. This gives x^2 - 2x - 9 = 0. Solve the quadratic to get x = 1 ± √10. Domain requires x > 2, so x = 1 + √10.",
+"latex_solution": "We have $\\log_3(x)+\\log_3(x-2)=2 \\Rightarrow \\log_3\\big(x(x-2)\\big)=2$. Thus $x(x-2)=3^2=9$, i.e., $x^2-2x-9=0$.\\\\\\n[x=\\frac{2\\pm\\sqrt{4+36}}{2}=1\\pm\\sqrt{10}.\\]\\nBy the domain ($x>2$ and $x-2>0$), the valid solution is $x=1+\\sqrt{10}$.",
+"topic": "algebra",
+"problem_type": "computation",
+"difficulty": "medium"
+},
+{
+"problem": "Factor the cubic polynomial x^3 - 6x^2 + 11x - 6 and find its real roots.",
+"text_solution": "Try rational roots ±1, ±2, ±3, ±6. Evaluate: f(1)=0, so (x-1) is a factor. Divide to get x^2 - 5x + 6 = (x-2)(x-3). Hence roots are 1, 2, 3.",
+"latex_solution": "Test rational roots of $f(x)=x^3-6x^2+11x-6$. Since $f(1)=0$, $(x-1)$ is a factor. Long division (or synthetic division) yields $x^2-5x+6=(x-2)(x-3)$.\\\\ Hence,\\n[x^3-6x^2+11x-6=(x-1)(x-2)(x-3),\\]\\nwith real roots $x=1,2,3$.",
+"topic": "algebra",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Compute the modulus and argument of (1 + 2i)^3.",
+"text_solution": "First find polar form of 1+2i: modulus r = √5 and argument θ = arctan(2). Then (1+2i)^3 has modulus r^3 = (√5)^3 = 5√5 and argument 3θ = 3 arctan(2).",
+"latex_solution": "Let $z=1+2i$. Then $|z|=\\sqrt{1^2+2^2}=\\sqrt{5}$ and $\\arg z=\\arctan(2)$. By De Moivre's theorem,\\n[z^3=|z|^3\\big(\\cos(3\\arg z)+i\\sin(3\\arg z)\\big),\\]\\nso $|z^3|=5\\sqrt{5}$ and $\\arg(z^3)=3\\arctan(2)$.",
+"topic": "algebra",
+"problem_type": "derivation",
+"difficulty": "medium"
+},
+{
+"problem": "Prove by induction that 1^2 + 2^2 + ... + n^2 = n(n + 1)(2n + 1)/6.",
+"text_solution": "Base case n=1 holds. Assume true for n. For n+1, sum to n plus (n+1)^2 equals n(n+1)(2n+1)/6 + (n+1)^2. Factor (n+1) and simplify to (n+1)(n+2)(2n+3)/6, which matches the formula with n→n+1.",
+"latex_solution": "\\textbf{Proof by induction.} Base case $n=1$: $1^2=1=\\frac{1\\cdot2\\cdot3}{6}$. Assume $\\sum_{k=1}^n k^2=\\frac{n(n+1)(2n+1)}{6}$. Then\\n\\begin{align*}\\n\\sum_{k=1}^{n+1}k^2&=\\frac{n(n+1)(2n+1)}{6}+(n+1)^2\\\\\\n&=\\frac{(n+1)\\big(n(2n+1)+6(n+1)\\big)}{6}\\\\\\n&=\\frac{(n+1)(2n^2+7n+6)}{6}=\\frac{(n+1)(n+2)(2n+3)}{6},\\n\\end{align*}\\nwhich is the claimed formula with $n\\to n+1$.",
+"topic": "algebra",
+"problem_type": "proof",
+"difficulty": "medium"
+},
+{
+"problem": "Find the partial fraction decomposition of (3x + 5)/(x^2 + 3x + 2).",
+"text_solution": "Factor the denominator: (x+1)(x+2). Write (3x+5)/((x+1)(x+2)) = A/(x+1) + B/(x+2). Solve 3x+5 = A(x+2) + B(x+1). Comparing coefficients gives A + B = 3 and 2A + B = 5, hence A = 2, B = 1.",
+"latex_solution": "We have $\\dfrac{3x+5}{x^2+3x+2}=\\dfrac{3x+5}{(x+1)(x+2)}=\\dfrac{A}{x+1}+\\dfrac{B}{x+2}$. Then\\n[3x+5=A(x+2)+B(x+1)=(A+B)x+(2A+B).\\]\\nHence $A+B=3$ and $2A+B=5$, giving $A=2$, $B=1$. Therefore,\\n[\\frac{3x+5}{x^2+3x+2}=\\frac{2}{x+1}+\\frac{1}{x+2}.\\]",
+"topic": "algebra",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Use the Euclidean algorithm to compute gcd(252, 198).",
+"text_solution": "Compute remainders: 252 = 198*1 + 54; 198 = 54*3 + 36; 54 = 36*1 + 18; 36 = 18*2 + 0. The last nonzero remainder is 18, so gcd is 18.",
+"latex_solution": "\\section*{Euclidean Algorithm}\\n\\begin{align*}\\n252&=198\\cdot 1+54,\\\\\\n198&=54\\cdot 3+36,\\\\\\n54&=36\\cdot 1+18,\\\\\\n36&=18\\cdot 2+0.\\n\\end{align*}\\nThe last nonzero remainder is $18$, hence $\\gcd(252,198)=18$.",
+"topic": "algebra",
+"problem_type": "algorithm",
+"difficulty": "easy"
+},
+{
+"problem": "Solve the quadratic equation x^2 - 4x + 7 = 0 by completing the square.",
+"text_solution": "Write x^2 - 4x + 7 = (x - 2)^2 + 3. Then (x - 2)^2 = -3, so x = 2 ± i√3.",
+"latex_solution": "Complete the square: $x^2-4x+7=(x-2)^2+3$. Then $(x-2)^2=-3$, so\\n[x=2\\pm i\\sqrt{3}.\\]\\nThus the roots are complex conjugates.",
+"topic": "algebra",
+"problem_type": "derivation",
+"difficulty": "easy"
+},
+{
+"problem": "Find the coefficient of x^5 in (2x - 1)^7.",
+"text_solution": "Use the binomial theorem. The x^5 term comes from k=5: C(7,5)(2x)^5(-1)^{2} = 21 * 32 x^5 * 1 = 672 x^5. Coefficient is 672.",
+"latex_solution": "By the binomial theorem,\\n[(2x-1)^7=\\sum_{k=0}^7 \\binom{7}{k}(2x)^k(-1)^{7-k}.\\]\\nThe $x^5$ term corresponds to $k=5$ and equals $\\binom{7}{5}(2x)^5(-1)^2=21\\cdot 32\\,x^5=672\\,x^5$.\\\\ Hence the coefficient is $672$.",
+"topic": "algebra",
+"problem_type": "computation",
+"difficulty": "medium"
+},
+{
+"problem": "Differentiate f(x) = x^x for x > 0.",
+"text_solution": "Take logs: ln f = x ln x. Differentiate: f'/f = ln x + 1. Thus f' = x^x(ln x + 1).",
+"latex_solution": "Let $f(x)=x^x$ for $x>0$. Then $\\ln f=x\\ln x$. Differentiating, $\\frac{f'}{f}=\\ln x+1$, so\\n[f'(x)=x^x(\\ln x+1).\\]",
+"topic": "calculus",
+"problem_type": "derivation",
+"difficulty": "medium"
+},
+{
+"problem": "Evaluate the definite integral ∫*0^1 x e^{x} \\, dx.",
+"text_solution": "Integrate by parts: let u = x, dv = e^x dx. Then du = dx, v = e^x. The integral is x e^x|*0^1 - ∫*0^1 e^x dx = (e - 0) - (e - 1) = 1.",
+"latex_solution": "Use integration by parts with $u=x$, $dv=e^x\\,dx$. Then $du=dx$, $v=e^x$ and\\n[\\int_0^1 x e^x\\,dx=\\big[x e^x\\big]*0^1-\\int_0^1 e^x\\,dx=(e-0)-(e-1)=1.\\]",
+"topic": "calculus",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Compute the limit lim*{x→0} (sin x)/x.",
+"text_solution": "Using the squeeze theorem or the Taylor expansion sin x = x - x^3/6 + ..., we get (sin x)/x → 1 as x → 0.",
+"latex_solution": "Using $\\sin x = x - \\tfrac{x^3}{6}+\\cdots$, we have\\n[\\frac{\\sin x}{x}=1-\\frac{x^2}{6}+\\cdots \\xrightarrow[x\\to 0]{} 1.\\]\\nAlternatively, apply the squeeze theorem with $\\cos x\\le\\frac{\\sin x}{x}\\le 1$ for $x\\ne 0$.",
+"topic": "calculus",
+"problem_type": "derivation",
+"difficulty": "easy"
+},
+{
+"problem": "Determine convergence of the series \\sum*{n=1}^{\\infty} 1/n^2 and find its value.",
+"text_solution": "The p-series with p=2 converges. Its sum is known to be π^2/6 by the Basel problem.",
+"latex_solution": "The series $\\sum*{n=1}^{\\infty}\\frac{1}{n^2}$ is a $p$-series with $p=2>1$, hence convergent. Moreover,\\n[\\sum*{n=1}^{\\infty}\\frac{1}{n^2}=\\frac{\\pi^2}{6}.\\]",
+"topic": "calculus",
+"problem_type": "proof",
+"difficulty": "medium"
+},
+{
+"problem": "Find the Taylor polynomial of order 3 for ln(1 + x) around x = 0.",
+"text_solution": "Use series expansion: ln(1+x) = x - x^2/2 + x^3/3 + O(x^4). So the third-order polynomial is x - x^2/2 + x^3/3.",
+"latex_solution": "The Taylor expansion about $0$ is\\n[\\ln(1+x)=x-\\frac{x^2}{2}+\\frac{x^3}{3}+O(x^4).\\]\\nThus the third-order Taylor polynomial is $x-\\tfrac{x^2}{2}+\\tfrac{x^3}{3}$.",
+"topic": "calculus",
+"problem_type": "derivation",
+"difficulty": "easy"
+},
+{
+"problem": "A rectangle has perimeter 20. Find the dimensions that maximize area.",
+"text_solution": "Let sides be x and y with 2(x + y) = 20, so y = 10 - x. Area A(x) = x(10 - x) = -x^2 + 10x. This parabola is maximized at x = 5, giving y = 5. A square maximizes area.",
+"latex_solution": "With $2(x+y)=20$, we have $y=10-x$. The area is\\n[A(x)=x(10-x)=-x^2+10x,\\]\\nwhich is maximized at the vertex $x=\\frac{10}{2}=5$. Then $y=5$. Hence the maximal area occurs for a square $5\\times 5$.",
+"topic": "calculus",
+"problem_type": "word_problem",
+"difficulty": "easy"
+},
+{
+"problem": "Solve the initial value problem y' + 2y = e^{-x}, y(0) = 0.",
+"text_solution": "Use integrating factor μ = e^{2x}. Then (e^{2x} y)' = e^{2x} e^{-x} = e^{x}. Integrate: e^{2x} y = e^{x} + C. Apply y(0)=0 to get 1 + C = 0 so C = -1. Thus y = e^{-x} - e^{-2x}.",
+"latex_solution": "With integrating factor $\\mu(x)=e^{2x}$, we get $(e^{2x}y)'=e^{x}$. Integrating,\\n[e^{2x}y=e^{x}+C.\\]\\nUsing $y(0)=0$ gives $1+C=0\\Rightarrow C=-1$. Therefore,\\n[y(x)=e^{-x}-e^{-2x}.\\]",
+"topic": "calculus",
+"problem_type": "computation",
+"difficulty": "medium"
+},
+{
+"problem": "Compute the gradient of f(x, y) = x^2 y + \\sin y and evaluate it at (1, 0).",
+"text_solution": "Partial derivatives: f_x = 2xy and f_y = x^2 + cos y. At (1, 0), f_x = 0 and f_y = 1 + 1 = 2, so the gradient is (0, 2).",
+"latex_solution": "We have $\\nabla f=(\\partial f/\\partial x,\\partial f/\\partial y)=(2xy,\\,x^2+\\cos y)$. Thus,\\n[\\nabla f(1,0)=(0,\\,1+1)=(0,2).\\]",
+"topic": "calculus",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Use Newton's method to approximate \\sqrt{2} starting with x_0 = 1. Perform two iterations.",
+"text_solution": "Find root of g(x) = x^2 - 2. Newton update: x_{n+1} = x_n - g(x_n)/g'(x_n) = x_n - (x_n^2 - 2)/(2x_n) = (x_n + 2/x_n)/2. x1 = (1 + 2)/2 = 1.5. x2 = (1.5 + 2/1.5)/2 = (1.5 + 1.333...)/2 ≈ 1.4167.",
+"latex_solution": "For $g(x)=x^2-2$, Newton's method yields\\n[x_{n+1}=x_n-\\frac{x_n^2-2}{2x_n}=\\frac{x_n+\\tfrac{2}{x_n}}{2}.\\]\\nStarting from $x_0=1$,\\n[x_1=\\tfrac{1+2}{2}=1.5,\\qquad x_2=\\frac{1.5+\\tfrac{2}{1.5}}{2}=\\frac{1.5+1.\\overline{3}}{2}\\approx 1.4167.\\]",
+"topic": "calculus",
+"problem_type": "algorithm",
+"difficulty": "medium"
+},
+{
+"problem": "Evaluate the improper integral ∫*1^{\\infty} 1/x^2 \\, dx.",
+"text_solution": "Compute the antiderivative -1/x. Evaluate from 1 to ∞: limit as b→∞ of (-1/b) - (-1/1) = 0 + 1 = 1.",
+"latex_solution": "We have $\\int_1^{\\infty} x^{-2}\\,dx=\\lim*{b\\to\\infty}\\int_1^b x^{-2}\\,dx=\\lim_{b\\to\\infty}\\big[-x^{-1}\\big]*1^b=\\lim*{b\\to\\infty}(-1/b+1)=1.$",
+"topic": "calculus",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Compute the determinant of A = [[1, 2, 3], [0, 1, 4], [5, 6, 0]].",
+"text_solution": "Use cofactor expansion or row operations. Expanding along the first row: det(A) = 1*det[[1,4],[6,0]] - 2*det[[0,4],[5,0]] + 3*det[[0,1],[5,6]] = 1*(1*0 - 4*6) - 2*(0 - 20) + 3*(0 - 5) = -24 + 40 - 15 = 1.",
+"latex_solution": "Let $A=\\begin{bmatrix}1&2&3\\\\0&1&4\\\\5&6&0\\end{bmatrix}$. Then\\n\\begin{align*}\\n\\det(A)&=1\\cdot\\det\\begin{bmatrix}1&4\\\\6&0\\end{bmatrix}-2\\cdot\\det\\begin{bmatrix}0&4\\\\5&0\\end{bmatrix}+3\\cdot\\det\\begin{bmatrix}0&1\\\\5&6\\end{bmatrix}\\\\\\n&=1\\cdot(0-24)-2\\cdot(0-20)+3\\cdot(0-5)\\\\\\n&=-24+40-15=1.\\n\\end{align*}",
+"topic": "linear_algebra",
+"problem_type": "computation",
+"difficulty": "medium"
+},
+{
+"problem": "Find the eigenvalues and eigenvectors of A = [[4, 1], [2, 3]].",
+"text_solution": "Characteristic polynomial det(A - λI) = (4 - λ)(3 - λ) - 2 = λ^2 - 7λ + 10 = (λ - 5)(λ - 2). For λ=5, solve (A-5I)v=0 to get eigenvectors proportional to (1,1). For λ=2, solve (A-2I)v=0 to get eigenvectors proportional to (-1,2).",
+"latex_solution": "For $A=\\begin{bmatrix}4&1\\\\2&3\\end{bmatrix}$, the characteristic polynomial is\\n[\\det(A-\\lambda I)=(4-\\lambda)(3-\\lambda)-2=\\lambda^2-7\\lambda+10=(\\lambda-5)(\\lambda-2).\\]\\nThus $\\lambda_1=5$, $\\lambda_2=2$. For $\\lambda=5$, $(A-5I)\\,v=0$ gives eigenvectors $\\propto (1,1)^{\\top}$. For $\\lambda=2$, eigenvectors $\\propto (-1,2)^{\\top}$.",
+"topic": "linear_algebra",
+"problem_type": "computation",
+"difficulty": "medium"
+},
+{
+"problem": "Decide whether A = [[1, 1], [0, 1]] is diagonalizable over \\mathbb{R}.",
+"text_solution": "A has characteristic polynomial (1 - λ)^2, so eigenvalue 1 with algebraic multiplicity 2. The eigenspace solves (A - I)v = 0 giving v proportional to (1, 0). Geometric multiplicity is 1. Not enough eigenvectors, so A is not diagonalizable.",
+"latex_solution": "The matrix $A=\\begin{bmatrix}1&1\\\\0&1\\end{bmatrix}$ has characteristic polynomial $(1-\\lambda)^2$, so eigenvalue $\\lambda=1$ with algebraic multiplicity $2$. The eigenspace is $\\ker(A-I)=\\ker\\begin{bmatrix}0&1\\\\0&0\\end{bmatrix}=\\operatorname{span}\\{(1,0)^{\\top}\\}$, of dimension $1$.\\\\ Since geometric multiplicity $<2$, $A$ is \\emph{not} diagonalizable.",
+"topic": "linear_algebra",
+"problem_type": "proof",
+"difficulty": "medium"
+},
+{
+"problem": "Solve the linear system using Gaussian elimination: x + y + z = 6, 2x + 3y + z = 10, x + 2y + 3z = 13.",
+"text_solution": "Subtract the first equation from the second to get x + 2y = 4. Subtract the first from the third to get y + 2z = 7. From x + 2y = 4, x = 4 - 2y. From y + 2z = 7, z = (7 - y)/2. Substitute into the first: (4 - 2y) + y + (7 - y)/2 = 6. Solve to get y = 1, then x = 2, z = 3.",
+"latex_solution": "The augmented matrix reduces as follows:\\n[\\n\\begin{bmatrix}1&1&1&|&6\\\\2&3&1&|&10\\\\1&2&3&|&13\\end{bmatrix}\\n\\xrightarrow{R_2\\leftarrow R_2-R_1,\\,R_3\\leftarrow R_3-R_1}\\n\\begin{bmatrix}1&1&1&|&6\\\\1&2&0&|&4\\\\0&1&2&|&7\\end{bmatrix}.\\n\\]\\nBack-substitution yields $y=1$, $x=2$, $z=3$.",
+"topic": "linear_algebra",
+"problem_type": "computation",
+"difficulty": "medium"
+},
+{
+"problem": "Given the 3×4 matrix M = [[1,0,1,2],[0,1,1,1],[1,1,2,3]], find its rank and nullity.",
+"text_solution": "Row 3 equals row 1 plus row 2, so rows are linearly dependent. Rows 1 and 2 are independent, so rank is 2. With 4 columns, nullity = 4 - rank = 2.",
+"latex_solution": "Let $M=\\begin{bmatrix}1&0&1&2\\\\0&1&1&1\\\\1&1&2&3\\end{bmatrix}$. Note $R_3=R_1+R_2$, so the row space is spanned by $R_1,R_2$ and $\\operatorname{rank}(M)=2$. Since $M$ has $4$ columns, $\\dim\\ker M=4-2=2$ by rank–nullity.",
+"topic": "linear_algebra",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Apply the Gram–Schmidt process to v1 = (1, 1) and v2 = (1, 0) in \\mathbb{R}^2 to obtain an orthonormal basis.",
+"text_solution": "Let u1 = v1. Normalize to e1 = u1/||u1|| = (1,1)/√2. Compute u2 = v2 - proj_{u1}(v2) = (1,0) - ((1,0)·(1,1))/(||u1||^2) u1 = (1,0) - (1/2)(1,1) = (1/2, -1/2). Normalize to e2 = (1/√2, -1/√2).",
+"latex_solution": "Set $u_1=v_1=(1,1)$ and $e_1=u_1/\\|u_1\\|=(1,1)/\\sqrt{2}$. Then\\n[u_2=v_2-\\operatorname{proj}*{u_1}(v_2)=(1,0)-\\frac{\\langle(1,0),(1,1)\\rangle}{\\|(1,1)\\|^2}(1,1)=(1,0)-\\tfrac{1}{2}(1,1)=\\big(\\tfrac{1}{2},-\\tfrac{1}{2}\\big).\\]\\nNormalize $u_2$ to $e_2=u_2/\\|u_2\\|=(1/\\sqrt{2},-1/\\sqrt{2})$. Thus $\\{e_1,e_2\\}$ is orthonormal.",
+"topic": "linear_algebra",
+"problem_type": "algorithm",
+"difficulty": "medium"
+},
+{
+"problem": "Find the orthogonal projection of v = (1, 2, 3) onto the line spanned by u = (1, 1, 0).",
+"text_solution": "Projection formula: proj_u(v) = (v·u)/(u·u) u. Compute v·u = 1*1 + 2*1 + 3*0 = 3, and u·u = 1 + 1 + 0 = 2. So projection is (3/2) u = (3/2, 3/2, 0).",
+"latex_solution": "Using $\\operatorname{proj}_u(v)=\\dfrac{\\langle v,u\\rangle}{\\langle u,u\\rangle}\\,u$, we have $\\langle v,u\\rangle=3$ and $\\langle u,u\\rangle=2$, hence\\n[\\operatorname{proj}_u(v)=\\tfrac{3}{2}(1,1,0)=(\\tfrac{3}{2},\\tfrac{3}{2},0).\\]",
+"topic": "linear_algebra",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Find the least squares solution x to Ax ≈ b with A = [[1,1],[1,2],[1,3]] and b = [1, 2, 2]^T.",
+"text_solution": "Normal equations: A^T A x = A^T b. Compute A^T A = [[3,6],[6,14]] and A^T b = [5, 12]. Solve [[3,6],[6,14]] x = [5,12]. Solving gives x = (0.5, 0.5).",
+"latex_solution": "With $A=\\begin{bmatrix}1&1\\\\1&2\\\\1&3\\end{bmatrix}$, $b=\\begin{bmatrix}1\\\\2\\\\2\\end{bmatrix}$, the normal equations are $(A^\\top A)x=A^\\top b$ with\\n[A^\\top A=\\begin{bmatrix}3&6\\\\6&14\\end{bmatrix},\\quad A^\\top b=\\begin{bmatrix}5\\\\12\\end{bmatrix}.\\]\\nSolving $\\begin{bmatrix}3&6\\\\6&14\\end{bmatrix}\\begin{bmatrix}x_1\\\\x_2\\end{bmatrix}=\\begin{bmatrix}5\\\\12\\end{bmatrix}$ yields $(x_1,x_2)=(\\tfrac{1}{2},\\tfrac{1}{2})$.",
+"topic": "linear_algebra",
+"problem_type": "computation",
+"difficulty": "medium"
+},
+{
+"problem": "Describe the singular value decomposition (SVD) of the matrix D = [[3,0],[0,1]].",
+"text_solution": "D is diagonal with positive entries. Its singular values are 3 and 1. We can take U = I and V = I, so D = U Σ V^T with Σ = diag(3,1).",
+"latex_solution": "For $D=\\operatorname{diag}(3,1)$, the singular values are the square roots of eigenvalues of $D^\\top D=D^2$, giving $\\sigma_1=3$, $\\sigma_2=1$. One valid SVD is\\n[D=U\\,\\Sigma\\,V^\\top,\\quad U=I_2,\\;V=I_2,\\;\\Sigma=\\operatorname{diag}(3,1).\\]",
+"topic": "linear_algebra",
+"problem_type": "derivation",
+"difficulty": "easy"
+},
+{
+"problem": "Run three iterations of the power method on A = [[2,1],[1,2]] starting with x_0 = (1,0)^T and normalize each step.",
+"text_solution": "Compute x1' = A x0 = (2,1), normalize to x1 = (2,1)/√5. Next x2' = A x1 = ((2*2+1*1)/√5, (1*2+2*1)/√5) = (5/√5, 4/√5) = (√5, 4/√5). Normalize to x2 = (√5, 4/√5)/√((5)+(16/5)) = (√5, 4/√5)/√(41/5) = (√(25/41), √(16/41)). Numerically x2 ≈ (0.7809, 0.6247). Repeat once more to get x3 close to the dominant eigenvector (1,1)/√2.",
+"latex_solution": "\\section*{Power Method}\\nLet $A=\\begin{bmatrix}2&1\\\\1&2\\end{bmatrix}$ and $x_0=(1,0)^\\top$. Then\\n[x_1'=Ax_0=(2,1)^\\top,\\quad x_1=\\frac{(2,1)^\\top}{\\sqrt{5}}.\\]\\nNext,\\n[x_2'=Ax_1=\\frac{1}{\\sqrt{5}}\\begin{bmatrix}5\\\\4\\end{bmatrix}=\\left(\\sqrt{5},\\,\\frac{4}{\\sqrt{5}}\\right)^\\top,\\quad x_2=\\frac{x_2'}{\\|x_2'\\|}=\\left(\\sqrt{\\tfrac{25}{41}},\\,\\sqrt{\\tfrac{16}{41}}\\right)^\\top.\\]\\nOne more iteration similarly yields $x_3$ even closer to the dominant eigenvector $\\frac{1}{\\sqrt{2}}(1,1)^\\top$.",
+"topic": "linear_algebra",
+"problem_type": "algorithm",
+"difficulty": "medium"
+},
+{
+"problem": "A diagnostic test has sensitivity 0.95 and specificity 0.9. The disease prevalence is 0.01. If a person tests positive, what is the probability they have the disease?",
+"text_solution": "Use Bayes. Let D be disease, T+ positive. P(D)=0.01, P(T+|D)=0.95, P(T+|D^c)=0.1. Then P(D|T+) = 0.95*0.01 / (0.95*0.01 + 0.1*0.99) ≈ 0.0876.",
+"latex_solution": "Bayes' rule gives\\n[\\Pr(D\\mid T+)=\\frac{\\Pr(T+\\mid D)\\Pr(D)}{\\Pr(T+\\mid D)\\Pr(D)+\\Pr(T+\\mid D^c)\\Pr(D^c)}=\\frac{0.95\\cdot 0.01}{0.95\\cdot 0.01+0.1\\cdot 0.99}\\approx 0.0876.\\]",
+"topic": "probability",
+"problem_type": "word_problem",
+"difficulty": "medium"
+},
+{
+"problem": "Compute the expected value of a geometric random variable with success probability p = 0.2.",
+"text_solution": "For a geometric distribution counting trials until first success, E[X] = 1/p = 5.",
+"latex_solution": "If $X\\sim\\operatorname{Geom}(p)$ (trials until first success), then $\\mathbb{E}[X]=\\dfrac{1}{p}$. For $p=0.2$, $\\mathbb{E}[X]=5.$",
+"topic": "probability",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "For X ~ Binomial(n=10, p=0.3), compute Var(X).",
+"text_solution": "Variance of a binomial is np(1 - p) = 10 * 0.3 * 0.7 = 2.1.",
+"latex_solution": "If $X\\sim\\operatorname{Bin}(n,p)$, then $\\operatorname{Var}(X)=np(1-p)$. With $n=10$, $p=0.3$, we get $\\operatorname{Var}(X)=10\\cdot 0.3\\cdot 0.7=2.1.$",
+"topic": "probability",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Two bags: Bag A has 2 red and 1 blue balls; Bag B has 1 red and 2 blue balls. Choose a bag uniformly and then draw one ball. What is the probability of drawing a red ball?",
+"text_solution": "By total probability: P(Red) = 0.5*(2/3) + 0.5*(1/3) = (1/3) + (1/6) = 1/2.",
+"latex_solution": "Let $A,B$ be the bags chosen with probability $1/2$ each. Then\\n[\\Pr(\\text{Red})=\\tfrac{1}{2}\\cdot\\tfrac{2}{3}+\\tfrac{1}{2}\\cdot\\tfrac{1}{3}=\\tfrac{1}{2}.\\]",
+"topic": "probability",
+"problem_type": "word_problem",
+"difficulty": "easy"
+},
+{
+"problem": "Let X ~ Uniform(0,1) and define Y = -2 ln X. Find the distribution of Y.",
+"text_solution": "Compute CDF: P(Y ≤ y) = P(-2 ln X ≤ y) = P(X ≥ e^{-y/2}) = 1 - e^{-y/2} for y ≥ 0. Hence Y ~ Exponential with rate 1/2 (mean 2).",
+"latex_solution": "For $y\\ge 0$,\\n[F_Y(y)=\\Pr(Y\\le y)=\\Pr(-2\\ln X\\le y)=\\Pr\\big(X\\ge e^{-y/2}\\big)=1-e^{-y/2}.\\]\\nThus $Y\\sim \\operatorname{Exp}(\\lambda=\\tfrac{1}{2})$ with density $f_Y(y)=\\tfrac{1}{2}e^{-y/2}$ for $y\\ge 0$.",
+"topic": "probability",
+"problem_type": "derivation",
+"difficulty": "medium"
+},
+{
+"problem": "For a Poisson process with rate λ = 1 (per unit time), compute P(N(2) = 3).",
+"text_solution": "Use the Poisson distribution with mean λt = 2: P(N(2)=3) = e^{-2} 2^3 / 3! = e^{-2} * 8/6 = (4/3)e^{-2}.",
+"latex_solution": "Since $N(2)\\sim\\operatorname{Pois}(\\lambda t)=\\operatorname{Pois}(2)$,\\n[\\Pr(N(2)=3)=e^{-2}\\frac{2^3}{3!}=\\frac{4}{3}e^{-2}.\\]",
+"topic": "probability",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Let X ~ Bernoulli(1/2) and Y = 1 - 2X. Compute Cov(X, Y).",
+"text_solution": "We have E[X]=1/2 and Y ∈ {1, -1} with E[Y]=0. Also E[XY] = E[X(1 - 2X)] = E[X] - 2E[X^2] = 1/2 - 2*(1/2) = -1/2. Then Cov(X,Y) = E[XY] - E[X]E[Y] = -1/2 - (1/2)*0 = -1/2.",
+"latex_solution": "Compute $\\mathbb{E}[X]=1/2$, $\\mathbb{E}[Y]=\\mathbb{E}[1-2X]=0$. Since $X^2=X$ for Bernoulli,\\n[\\mathbb{E}[XY]=\\mathbb{E}[X(1-2X)]=\\mathbb{E}[X]-2\\mathbb{E}[X^2]=\\tfrac{1}{2}-2\\cdot \\tfrac{1}{2}=-\\tfrac{1}{2}.\\]\\nThus $\\operatorname{Cov}(X,Y)=\\mathbb{E}[XY]-\\mathbb{E}[X]\\mathbb{E}[Y]=-\\tfrac{1}{2}.$",
+"topic": "probability",
+"problem_type": "computation",
+"difficulty": "medium"
+},
+{
+"problem": "Show that if the joint density factors as f*{X,Y}(x,y) = f_X(x) f_Y(y), then X and Y are independent.",
+"text_solution": "Compute the joint CDF: P(X ≤ a, Y ≤ b) = ∬*{x≤a, y≤b} f_X(x) f_Y(y) dx dy = (∫*{x≤a} f_X(x) dx)(∫*{y≤b} f_Y(y) dy) = F_X(a) F_Y(b). The product form of the CDF implies independence.",
+"latex_solution": "Assuming $f*{X,Y}(x,y)=f_X(x)f_Y(y)$, for any $a,b$,\\n\\begin{align*}\\n\\Pr(X\\le a, Y\\le b)&=\\int_{-\\infty}^a\\int_{-\\infty}^b f_X(x)f_Y(y)\\,dy\\,dx\\\\\\n&=\\left(\\int_{-\\infty}^a f_X(x)\\,dx\\right)\\left(\\int_{-\\infty}^b f_Y(y)\\,dy\\right)=F_X(a)F_Y(b).\\n\\end{align*}\\nHence $X$ and $Y$ are independent.",
+"topic": "probability",
+"problem_type": "proof",
+"difficulty": "medium"
+},
+{
+"problem": "Compute E[Y] where X ~ Uniform(0,1) and Y|X = x ~ Bernoulli(x).",
+"text_solution": "Law of total expectation: E[Y] = E[E[Y|X]] = E[X] = 1/2 for Uniform(0,1).",
+"latex_solution": "By the tower property,\\n[\\mathbb{E}[Y]=\\mathbb{E}[\\mathbb{E}[Y\\mid X]]=\\mathbb{E}[X]=\\int_0^1 x\\,dx=\\tfrac{1}{2}.\\]",
+"topic": "probability",
+"problem_type": "derivation",
+"difficulty": "easy"
+},
+{
+"problem": "Describe the inverse transform sampling algorithm to generate an Exponential(λ) random variable from U ~ Uniform(0,1).",
+"text_solution": "If U ~ Uniform(0,1), then set X = F^{-1}(U) where F(x) = 1 - e^{-λx}. Solve u = 1 - e^{-λx} to get X = -(1/λ) ln(1 - U). Since 1 - U has same distribution as U, we can use X = -(1/λ) ln U.",
+"latex_solution": "\\section*{Inverse Transform for Exponential}\\nLet $U\\sim\\operatorname{Unif}(0,1)$. The CDF is $F(x)=1-e^{-\\lambda x}$ for $x\\ge 0$. Solve $u=F(x)$: $u=1-e^{-\\lambda x}\\Rightarrow x=-(1/\\lambda)\\ln(1-u)$. Since $1-U\\stackrel{d}{=}U$,\\n[X=-\\frac{1}{\\lambda}\\ln U\\sim\\operatorname{Exp}(\\lambda).\\]\\n\\begin{enumerate}\\n\\item Generate $U\\sim\\operatorname{Unif}(0,1)$.\\n\\item Set $X=-(1/\\lambda)\\ln U$.\\n\\item Output $X$.\\n\\end{enumerate}",
+"topic": "probability",
+"problem_type": "algorithm",
+"difficulty": "easy"
+},
+{
+"problem": "Given data [2, 4, 6, 8], compute the sample mean and the unbiased sample variance.",
+"text_solution": "Mean is (2+4+6+8)/4 = 5. Sample variance uses denominator n-1: s^2 = [(2-5)^2 + (4-5)^2 + (6-5)^2 + (8-5)^2]/3 = (9 + 1 + 1 + 9)/3 = 20/3 ≈ 6.6667.",
+"latex_solution": "For $x=(2,4,6,8)$, the sample mean is\\n[\\bar{x}=\\frac{2+4+6+8}{4}=5.\\]\\nThe unbiased variance is\\n[s^2=\\frac{\\sum_{i=1}^4 (x_i-\\bar{x})^2}{4-1}=\\frac{9+1+1+9}{3}=\\frac{20}{3}\\approx 6.667.\\]",
+"topic": "statistics",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Find the maximum likelihood estimator (MLE) for λ given i.i.d. samples x_1, ..., x_n from an Exponential(λ) distribution.",
+"text_solution": "The likelihood is λ^n exp(-λ∑x_i). Log-likelihood is n ln λ - λ∑x_i. Differentiate and set to zero: n/λ - ∑x_i = 0 ⇒ λ̂ = n / ∑x_i.",
+"latex_solution": "For $X_i\\stackrel{\\text{i.i.d.}}\\sim\\operatorname{Exp}(\\lambda)$, the log-likelihood is\\n[\\ell(\\lambda)=n\\ln\\lambda-\\lambda\\sum_{i=1}^n x_i.\\]\\nSetting $\\frac{d\\ell}{d\\lambda}=0$ gives $\\frac{n}{\\lambda}-\\sum x_i=0$, hence\\n[\\widehat{\\lambda}=\\frac{n}{\\sum_{i=1}^n x_i}.\\]",
+"topic": "statistics",
+"problem_type": "derivation",
+"difficulty": "medium"
+},
+{
+"problem": "Construct a 95% confidence interval for the mean of a normal population with known σ = 3, sample size n = 36, and sample mean \\bar{x} = 5.",
+"text_solution": "Use z-based CI: \\bar{x} ± z_{0.975} σ/√n = 5 ± 1.96*(3/6) = 5 ± 0.98, giving (4.02, 5.98).",
+"latex_solution": "A $95\\%$ CI is\\n[\\bar{x}\\pm z_{0.975}\\,\\frac{\\sigma}{\\sqrt{n}}=5\\pm 1.96\\cdot\\frac{3}{6}=5\\pm 0.98=(4.02,\\,5.98).\\]",
+"topic": "statistics",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Test H0: μ = 50 vs H1: μ ≠ 50 with n = 100, sample mean 51.2, known σ = 10 at α = 0.05.",
+"text_solution": "Compute z = (51.2 - 50)/(10/√100) = 1.2. Critical values are ±1.96. Since |1.2| < 1.96, fail to reject H0.",
+"latex_solution": "Test statistic\\n[z=\\frac{\\bar{x}-\\mu_0}{\\sigma/\\sqrt{n}}=\\frac{51.2-50}{10/10}=1.2.\\]\\nAt $\\alpha=0.05$, critical region is $|z|>1.96$. Since $|1.2|<1.96$, we fail to reject $H_0$.",
+"topic": "statistics",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "For data x = [1,2,3,4] and y = [2,3,5,4], compute the least-squares regression line y = b0 + b1 x.",
+"text_solution": "Compute x̄=2.5, ȳ=3.5. Sxx = 5.0, Sxy = 4.0. Then b1 = Sxy/Sxx = 0.8, b0 = ȳ - b1 x̄ = 3.5 - 0.8*2.5 = 1.5. So the line is y = 1.5 + 0.8x.",
+"latex_solution": "With $\\bar{x}=2.5$, $\\bar{y}=3.5$, $S_{xx}=\\sum (x_i-\\bar{x})^2=5$, $S_{xy}=\\sum (x_i-\\bar{x})(y_i-\\bar{y})=4$, we get\\n[b_1=\\frac{S_{xy}}{S_{xx}}=0.8,\\qquad b_0=\\bar{y}-b_1\\bar{x}=1.5.\\]\\nThus $\\widehat{y}=1.5+0.8x$.",
+"topic": "statistics",
+"problem_type": "computation",
+"difficulty": "medium"
+},
+{
+"problem": "Perform a chi-square goodness-of-fit test for observed counts [18, 22, 20, 40] against expected proportions [0.2, 0.2, 0.2, 0.4] with total N = 100.",
+"text_solution": "Expected counts are [20,20,20,40]. Statistic is Σ(O-E)^2/E = (18-20)^2/20 + (22-20)^2/20 + 0 + 0 = 0.4. With df=3, the statistic is small; fail to reject the null.",
+"latex_solution": "Compute $E_i=N p_i=[20,20,20,40]$. Then\\n[\\chi^2=\\sum\\frac{(O_i-E_i)^2}{E_i}=\\frac{(18-20)^2}{20}+\\frac{(22-20)^2}{20}+0+0=0.4.\\]\\nWith $df=3$, we do not reject the null at common significance levels.",
+"topic": "statistics",
+"problem_type": "computation",
+"difficulty": "medium"
+},
+{
+"problem": "Compute the Pearson correlation coefficient for x = [1,2,3,4] and y = [2,3,5,4].",
+"text_solution": "We computed Sxx = 5, Syy = 5, Sxy = 4. Then r = Sxy / sqrt(Sxx Syy) = 4 / 5 = 0.8.",
+"latex_solution": "With $S_{xx}=5$, $S_{yy}=\\sum (y_i-\\bar{y})^2=5$, and $S_{xy}=4$, the correlation is\\n[r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}=\\frac{4}{\\sqrt{25}}=0.8.\\]",
+"topic": "statistics",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Show the bias–variance decomposition for squared error: E[(Y - \\hat{f}(X))^2] = Var(Y|X) + (Bias)^2 + Var(\\hat{f}(X)).",
+"text_solution": "Condition on X and add–subtract E[\\hat{f}(X)|X]. Expand the square and use that E[ε|X]=0 for noise. The result separates into irreducible noise Var(Y|X), squared bias of the estimator, and its variance.",
+"latex_solution": "Write $Y=f(X)+\\varepsilon$ with $\\mathbb{E}[\\varepsilon\\mid X]=0$. Then\\n\\begin{align*}\\n\\mathbb{E}\\big[(Y-\\hat{f}(X))^2\\mid X\\big]&=\\mathbb{E}\\big[(f(X)-\\hat{f}(X)+\\varepsilon)^2\\mid X\\big]\\\\\\n&=(f(X)-\\mathbb{E}[\\hat{f}(X)\\mid X])^2+\\operatorname{Var}(\\hat{f}(X)\\mid X)+\\operatorname{Var}(\\varepsilon\\mid X).\\n\\end{align*}\\nTaking expectation over $X$ yields $\\operatorname{Var}(Y\\mid X)+\\text{Bias}^2+\\operatorname{Var}(\\hat{f}(X))$.",
+"topic": "statistics",
+"problem_type": "proof",
+"difficulty": "hard"
+},
+{
+"problem": "Construct a 95% Wald confidence interval for a proportion with x = 45 successes out of n = 100 trials.",
+"text_solution": "Estimate p̂ = 0.45. Standard error is sqrt(p̂(1-p̂)/n) ≈ sqrt(0.2475/100) ≈ 0.04975. Margin is 1.96*0.04975 ≈ 0.0975. CI ≈ (0.3525, 0.5475).",
+"latex_solution": "With $\\hat{p}=45/100=0.45$, the Wald CI is\\n[\\hat{p}\\pm z_{0.975}\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}=0.45\\pm 1.96\\sqrt{\\frac{0.45\\cdot 0.55}{100}}\\approx 0.45\\pm 0.0975=(0.3525,0.5475).\\]",
+"topic": "statistics",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Outline gradient descent to fit simple linear regression y = b0 + b1 x by minimizing mean squared error.",
+"text_solution": "Initialize b0, b1. Repeat: compute gradients ∂J/∂b0 = (2/n) Σ(b0 + b1 x_i - y_i), ∂J/∂b1 = (2/n) Σ x_i(b0 + b1 x_i - y_i). Update b0 ← b0 - η ∂J/∂b0 and b1 ← b1 - η ∂J/∂b1 until convergence.",
+"latex_solution": "\\section*{Gradient Descent for Linear Regression}\\nLet $J(b_0,b_1)=\\tfrac{1}{n}\\sum_{i=1}^n (b_0+b_1 x_i-y_i)^2$. The gradients are\\n[\\frac{\\partial J}{\\partial b_0}=\\frac{2}{n}\\sum_{i=1}^n (b_0+b_1 x_i-y_i),\\quad \\frac{\\partial J}{\\partial b_1}=\\frac{2}{n}\\sum_{i=1}^n x_i(b_0+b_1 x_i-y_i).\\]\\nUpdate\\n[b_0\\leftarrow b_0-\\eta\\,\\frac{\\partial J}{\\partial b_0},\\quad b_1\\leftarrow b_1-\\eta\\,\\frac{\\partial J}{\\partial b_1}.\\]\\nRepeat until convergence.",
+"topic": "statistics",
+"problem_type": "algorithm",
+"difficulty": "medium"
+},
+{
+"problem": "Solve for real x: 3^{2x} = 81.",
+"text_solution": "Note 81 = 3^4. Then 3^{2x} = 3^4 implies 2x = 4, so x = 2.",
+"latex_solution": "We have $3^{2x}=81=3^4$. Thus $2x=4$ and $x=2.$",
+"topic": "algebra",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Prove that if a and b are integers with a|b and b|a, then |a| = |b|.",
+"text_solution": "If a|b, then b = ak. If b|a, then a = bℓ. Substitute to get a = akℓ, so a(1 - kℓ) = 0. Since a ≠ 0 unless both are zero; otherwise kℓ = 1. Hence k and ℓ are ±1, implying |a| = |b|.",
+"latex_solution": "Suppose $a\\mid b$ and $b\\mid a$. Then $b=ak$ and $a=b\\ell$ for some integers $k,\\ell$. Substituting gives $a=ak\\ell$, so $a(1-k\\ell)=0$. If $a=b=0$ the claim holds. Otherwise $k\\ell=1$, hence $k=\\ell=\\pm 1$, so $|a|=|b|$.",
+"topic": "algebra",
+"problem_type": "proof",
+"difficulty": "easy"
+},
+{
+"problem": "Find real solutions of the system: x + y = 5 and x^2 + y^2 = 13.",
+"text_solution": "From x + y = 5, y = 5 - x. Substitute into x^2 + (5 - x)^2 = 13 ⇒ 2x^2 - 10x + 25 = 13 ⇒ 2x^2 - 10x + 12 = 0 ⇒ x^2 - 5x + 6 = 0 ⇒ x = 2 or 3. Then y = 3 or 2 respectively.",
+"latex_solution": "Let $y=5-x$. Then\\n[x^2+(5-x)^2=13\\Rightarrow 2x^2-10x+25=13\\Rightarrow x^2-5x+6=0.\\]\\nThus $x\\in\\{2,3\\}$ and correspondingly $y\\in\\{3,2\\}$. Solutions: $(2,3)$ and $(3,2)$.",
+"topic": "algebra",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Compute the derivative of f(x) = \\frac{x^2 + 1}{x}.",
+"text_solution": "Rewrite as f(x) = x + 1/x. Then f'(x) = 1 - 1/x^2.",
+"latex_solution": "We have $f(x)=x+\\dfrac{1}{x}$, so $f'(x)=1-\\dfrac{1}{x^2}.$",
+"topic": "calculus",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Evaluate the integral ∫ (2x)/(x^2 + 1) \\, dx.",
+"text_solution": "Let u = x^2 + 1, du = 2x dx. Then integral is ∫ du/u = ln|u| + C = ln(x^2 + 1) + C.",
+"latex_solution": "With $u=x^2+1$, $du=2x\\,dx$, so\\n[\\int \\frac{2x}{x^2+1}\\,dx=\\int \\frac{du}{u}=\\ln(x^2+1)+C.\\]",
+"topic": "calculus",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Determine the radius of convergence of the power series \\sum_{n=0}^{\\infty} x^n/n!.",
+"text_solution": "Use the ratio test: lim |a_{n+1}/a_n| = lim |x|/(n+1) = 0 for any fixed x, so the series converges for all x; radius is ∞.",
+"latex_solution": "With $a_n=\\dfrac{x^n}{n!}$, the ratio test gives\\n[\\lim_{n\\to\\infty}\\left|\\frac{a_{n+1}}{a_n}\\right|=\\lim_{n\\to\\infty}\\frac{|x|}{n+1}=0<1,\\]\\nfor all $x\\in\\mathbb{R}$. Hence the radius of convergence is $R=\\infty$.",
+"topic": "calculus",
+"problem_type": "proof",
+"difficulty": "easy"
+},
+{
+"problem": "Find a basis for the null space of A = [[1,2,1],[2,4,2],[1,2,1]].",
+"text_solution": "Rows are multiples: rank is 1. Solve Ax=0 with equation x1 + 2x2 + x3 = 0. Set free variables x2 = s, x3 = t. Then x1 = -2s - t. Basis vectors are (-2,1,0) and (-1,0,1).",
+"latex_solution": "Since rows are proportional, $\\operatorname{rank}(A)=1$. Solve $x_1+2x_2+x_3=0$. Let $x_2=s$, $x_3=t$, then $x_1=-2s-t$. Hence\\n[\\mathcal{N}(A)=\\operatorname{span}\\{(-2,1,0)^{\\top},\\,(-1,0,1)^{\\top}\\}.\\]",
+"topic": "linear_algebra",
+"problem_type": "computation",
+"difficulty": "medium"
+},
+{
+"problem": "Given independent fair coin tosses, what is the expected number of tosses until the first head appears?",
+"text_solution": "This is a geometric distribution with p = 1/2. The expectation is 1/p = 2.",
+"latex_solution": "Let $X\\sim\\operatorname{Geom}(p=1/2)$. Then $\\mathbb{E}[X]=1/p=2.$",
+"topic": "probability",
+"problem_type": "word_problem",
+"difficulty": "easy"
+},
+{
+"problem": "Let X have density f(x) = 2x on [0,1]. Compute E[X] and Var(X).",
+"text_solution": "E[X] = ∫_0^1 x*(2x) dx = 2∫_0^1 x^2 dx = 2/3. E[X^2] = ∫*0^1 x^2*(2x) dx = 2∫*0^1 x^3 dx = 1/2. Then Var(X) = E[X^2] - (E[X])^2 = 1/2 - (4/9) = 1/18.",
+"latex_solution": "Compute\\n[\\mathbb{E}[X]=\\int_0^1 x\\cdot 2x\\,dx=2\\int_0^1 x^2\\,dx=\\tfrac{2}{3},\\quad \\mathbb{E}[X^2]=2\\int_0^1 x^3\\,dx=\\tfrac{1}{2}.\\]\\nThus $\\operatorname{Var}(X)=\\tfrac{1}{2}-\\left(\\tfrac{2}{3}\\right)^2=\\tfrac{1}{18}.$",
+"topic": "probability",
+"problem_type": "computation",
+"difficulty": "medium"
+},
+{
+"problem": "From a sample of size n from N(μ, σ^2), derive the MLE for μ when σ^2 is known.",
+"text_solution": "Log-likelihood is -(n/2) ln(2πσ^2) - (1/(2σ^2)) Σ(x_i - μ)^2. Differentiate w.r.t μ: set derivative to zero to get Σ(x_i - μ) = 0 ⇒ μ̂ = x̄.",
+"latex_solution": "The log-likelihood is\\n[\\ell(\\mu)=-\\frac{n}{2}\\ln(2\\pi\\sigma^2)-\\frac{1}{2\\sigma^2}\\sum*{i=1}^n (x_i-\\mu)^2.\\]\\nThen $\\partial\\ell/\\partial\\mu=\\frac{1}{\\sigma^2}\\sum (x_i-\\mu)$, setting to $0$ yields $\\widehat{\\mu}=\\bar{x}$.",
+"topic": "statistics",
+"problem_type": "derivation",
+"difficulty": "easy"
+},
+{
+"problem": "A car rental company charges a base fee of $50 plus $0.2 per kilometer. If your budget is $110, how many kilometers can you drive?",
+"text_solution": "Cost C = 50 + 0.2k ≤ 110. Then 0.2k ≤ 60 ⇒ k ≤ 300.",
+"latex_solution": "Let $C=50+0.2k\\le 110$. Then $0.2k\\le 60\\Rightarrow k\\le 300$. You can drive up to $300$ km.",
+"topic": "algebra",
+"problem_type": "word_problem",
+"difficulty": "easy"
+},
+{
+"problem": "Compute the directional derivative of f(x,y) = x^2 + 3xy at (1,2) in the direction of the unit vector u = (3/5, 4/5).",
+"text_solution": "Gradient ∇f = (2x + 3y, 3x). At (1,2), ∇f = (2 + 6, 3) = (8,3). Directional derivative is ∇f · u = 8*(3/5) + 3*(4/5) = 24/5 + 12/5 = 36/5.",
+"latex_solution": "We have $\\nabla f=(2x+3y,\\,3x)$. At $(1,2)$, $\\nabla f=(8,3)$. For $u=(\\tfrac{3}{5},\\tfrac{4}{5})$,\\n[D_u f(1,2)=\\nabla f\\cdot u=\\frac{24}{5}+\\frac{12}{5}=\\frac{36}{5}.\\]",
+"topic": "calculus",
+"problem_type": "computation",
+"difficulty": "medium"
+},
+{
+"problem": "Given A = [[1,2],[2,5]], find its Cholesky factorization A = L L^T.",
+"text_solution": "Let L = [[a,0],[b,c]]. Then LL^T = [[a^2, ab],[ab, b^2 + c^2]] equals A. Solve a^2 = 1 ⇒ a = 1; ab = 2 ⇒ b = 2; b^2 + c^2 = 5 ⇒ 4 + c^2 = 5 ⇒ c = 1.",
+"latex_solution": "Let $L=\\begin{bmatrix}a&0\\\\b&c\\end{bmatrix}$. Then $LL^\\top=\\begin{bmatrix}a^2&ab\\\\ab&b^2+c^2\\end{bmatrix}=\\begin{bmatrix}1&2\\\\2&5\\end{bmatrix}$. Solve $a^2=1\\Rightarrow a=1$, $ab=2\\Rightarrow b=2$, $b^2+c^2=5\\Rightarrow c=1$. Thus\\n[A=\\begin{bmatrix}1&0\\\\2&1\\end{bmatrix}\\begin{bmatrix}1&2\\\\0&1\\end{bmatrix}.\\]",
+"topic": "linear_algebra",
+"problem_type": "derivation",
+"difficulty": "medium"
+},
+{
+"problem": "In a Poisson process with rate λ, show that interarrival times are i.i.d. exponential with parameter λ.",
+"text_solution": "The waiting time T_1 to first event satisfies P(T_1 > t) = P(N(t)=0) = e^{-λt}, so T_1 ~ Exp(λ). By the memoryless property and independent increments, successive interarrivals are i.i.d. Exp(λ).",
+"latex_solution": "Let $N(t)$ be Poisson with rate $\\lambda$. Then $\\Pr(T_1>t)=\\Pr(N(t)=0)=e^{-\\lambda t}$, so $T_1\\sim\\operatorname{Exp}(\\lambda)$. By independent increments and stationarity, $T*{k+1}-T_k\\stackrel{\\text{i.i.d.}}\\sim\\operatorname{Exp}(\\lambda)$.",
+"topic": "probability",
+"problem_type": "proof",
+"difficulty": "medium"
+},
+{
+"problem": "Given the dataset x = [0,1,2,3] and y = [1,2,0,5], compute the mean squared error of the predictor \\hat{y} = 1 + x.",
+"text_solution": "Predictions: [1,2,3,4]. Errors: [0,0,3,-1]. Squared errors: [0,0,9,1]. MSE = (0+0+9+1)/4 = 2.5.",
+"latex_solution": "With $\\hat{y}*i=1+x_i$, the residuals are $[0,0,3,-1]$ and squares $[0,0,9,1]$. Thus\\n[\\operatorname{MSE}=\\frac{0+0+9+1}{4}=2.5.\\]",
+"topic": "statistics",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Prove that the set of all solutions to Ax = 0 is a subspace of \\mathbb{R}^n.",
+"text_solution": "The zero vector satisfies A0 = 0, so nonempty. If x and y are solutions, A(x + y) = Ax + Ay = 0. For scalar c, A(cx) = c(Ax) = 0. Hence closed under addition and scalar multiplication; it is a subspace.",
+"latex_solution": "Let $S=\\{x\\in\\mathbb{R}^n: Ax=0\\}$. Then $0\\in S$. If $x,y\\in S$, $A(x+y)=Ax+Ay=0$. For any scalar $c$, $A(cx)=c(Ax)=0$. Hence $S$ is nonempty and closed under addition and scalar multiplication, thus a subspace.",
+"topic": "linear_algebra",
+"problem_type": "proof",
+"difficulty": "easy"
+},
+{
+"problem": "Solve the separable differential equation dy/dx = y(1 - y), with y(0) = 1/2.",
+"text_solution": "Separate: dy/[y(1 - y)] = dx. Partial fractions give 1/y + 1/(1-y). Integrate to get ln|y| - ln|1 - y| = x + C. Solve for y to obtain y = 1/(1 + Ce^{-x}). Use y(0)=1/2 ⇒ C = 1. Final: y = 1/(1 + e^{-x}).",
+"latex_solution": "Separate variables: $\\dfrac{dy}{y(1-y)}=dx$. With $\\dfrac{1}{y(1-y)}=\\dfrac{1}{y}+\\dfrac{1}{1-y}$,\\n[\\int \\left(\\frac{1}{y}+\\frac{1}{1-y}\\right)dy=\\int dx\\Rightarrow \\ln\\left|\\frac{y}{1-y}\\right|=x+C.\\]\\nThus $y=\\dfrac{1}{1+Ce^{-x}}$. Using $y(0)=\\tfrac{1}{2}$ gives $C=1$, so $y=\\dfrac{1}{1+e^{-x}}.$",
+"topic": "calculus",
+"problem_type": "derivation",
+"difficulty": "medium"
+},
+{
+"problem": "Given probabilities P(A)=0.4, P(B)=0.5, and P(A∩B)=0.2, compute P(A|B) and determine if A and B are independent.",
+"text_solution": "P(A|B) = P(A∩B)/P(B) = 0.2/0.5 = 0.4. Since P(A) = 0.4 equals P(A|B), A and B are independent.",
+"latex_solution": "We have $\\Pr(A\\mid B)=\\dfrac{\\Pr(A\\cap B)}{\\Pr(B)}=\\dfrac{0.2}{0.5}=0.4$. Since $\\Pr(A\\mid B)=\\Pr(A)$, events $A$ and $B$ are independent.",
+"topic": "probability",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Prove that the sample variance s^2 = (1/(n-1)) Σ (x_i - \\bar{x})^2 is unbiased for σ^2 under i.i.d. sampling.",
+"text_solution": "Expand Σ(x_i - \\bar{x})^2 = Σ(x_i - μ)^2 - n(\\bar{x} - μ)^2. Taking expectations gives E[Σ(x_i - \\bar{x})^2] = (n - 1)σ^2. Dividing by n - 1 yields E[s^2] = σ^2.",
+"latex_solution": "Using the identity $\\sum (x_i-\\bar{x})^2=\\sum (x_i-\\mu)^2-n(\\bar{x}-\\mu)^2$, take expectation to obtain\\n[\\mathbb{E}\\left[\\sum (x_i-\\bar{x})^2\\right]=(n-1)\\sigma^2.\\]\\nThus $\\mathbb{E}[s^2]=\\mathbb{E}\\big[\\tfrac{1}{n-1}\\sum (x_i-\\bar{x})^2\\big]=\\sigma^2.$",
+"topic": "statistics",
+"problem_type": "proof",
+"difficulty": "hard"
+},
+{
+"problem": "Find all real x such that x^4 - 5x^2 + 6 = 0.",
+"text_solution": "Let y = x^2. Then y^2 - 5y + 6 = 0 ⇒ (y - 2)(y - 3) = 0. So y = 2 or 3. Hence x = ±√2 or ±√3.",
+"latex_solution": "Set $y=x^2$. Then $y^2-5y+6=0\\Rightarrow y\\in\\{2,3\\}$. Therefore $x\\in\\{\\pm\\sqrt{2},\\pm\\sqrt{3}\\}.$",
+"topic": "algebra",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Design an algorithm to compute the greatest common divisor (GCD) of two integers a and b using the extended Euclidean algorithm and output integers x, y with ax + by = gcd(a,b).",
+"text_solution": "Use the extended Euclidean recursion: gcd(a,b) = gcd(b, a mod b). Track coefficients (x,y) by back-substitution during recursion. Base: if b=0, return (a,1,0). Recurrence: (g,x1,y1) = extgcd(b, a mod b), then return (g, y1, x1 - ⌊a/b⌋ y1).",
+"latex_solution": "\\section*{Extended Euclidean Algorithm}\\n\\begin{enumerate}\\n\\item If $b=0$, return $(g,x,y)=(a,1,0)$.\\n\\item Otherwise compute $(g,x_1,y_1)=\\operatorname{extgcd}(b,\\,a\\bmod b)$.\\n\\item Return $(g,\\,x,\\,y)=(g,\\,y_1,\\,x_1-\\lfloor a/b\\rfloor\\,y_1)$.\\n\\end{enumerate}\\nThis satisfies $ax+by=g=\\gcd(a,b)$ by induction.",
+"topic": "algebra",
+"problem_type": "algorithm",
+"difficulty": "medium"
+},
+{
+"problem": "Compute the integral ∫*0^{\\pi} \\sin^2 x \\, dx.",
+"text_solution": "Use identity sin^2 x = (1 - cos 2x)/2. Then integral is ∫*0^{π} (1/2) dx - ∫*0^{π} (cos 2x)/2 dx = (π/2) - 0 = π/2.",
+"latex_solution": "Since $\\sin^2 x=\\tfrac{1-\\cos 2x}{2}$,\\n[\\int_0^{\\pi}\\sin^2 x\\,dx=\\frac{1}{2}\\int_0^{\\pi}dx-\\frac{1}{2}\\int_0^{\\pi}\\cos 2x\\,dx=\\frac{\\pi}{2}.\\]",
+"topic": "calculus",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Show that if v_1, ..., v_k are orthonormal, then \\|\\sum c_i v_i\\|^2 = \\sum |c_i|^2.",
+"text_solution": "Expand the squared norm using inner products. Cross terms vanish because v_i are orthonormal, leaving the sum of squared coefficients.",
+"latex_solution": "Using orthonormality $\\langle v_i,v_j\\rangle=\\delta*{ij}$,\\n\\begin{align*}\\n\\left\\|\\sum*{i=1}^k c_i v_i\\right\\|^2&=\\left\\langle\\sum c_i v_i,\\sum c_j v_j\\right\\rangle=\\sum*{i,j} c_i\\overline{c_j}\\langle v_i,v_j\\rangle=\\sum*{i=1}^k |c_i|^2.\\n\\end{align*}",
+"topic": "linear_algebra",
+"problem_type": "proof",
+"difficulty": "easy"
+},
+{
+"problem": "Given a random sample from Bernoulli(p), derive the MLE for p.",
+"text_solution": "Likelihood L(p) = p^{Σx_i} (1 - p)^{n - Σx_i}. Log-likelihood is Σx_i ln p + (n - Σx_i) ln(1 - p). Differentiate and set to zero to get p̂ = (Σx_i)/n.",
+"latex_solution": "For $X_i\\sim\\operatorname{Bern}(p)$, the log-likelihood is\\n[\\ell(p)=\\Big(\\sum x_i\\Big)\\ln p+\\Big(n-\\sum x_i\\Big)\\ln(1-p).\\]\\nSet $\\partial\\ell/\\partial p=\\frac{\\sum x_i}{p}-\\frac{n-\\sum x_i}{1-p}=0$ to obtain $\\widehat{p}=\\frac{1}{n}\\sum x_i.$",
+"topic": "statistics",
+"problem_type": "derivation",
+"difficulty": "easy"
+},
+{
+"problem": "A fair six-sided die is rolled twice. Let X be the sum. Compute P(X = 7).",
+"text_solution": "There are 36 outcomes. Pairs summing to 7 are (1,6),(2,5),(3,4),(4,3),(5,2),(6,1): 6 outcomes. Probability is 6/36 = 1/6.",
+"latex_solution": "Favorable outcomes: $(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)$, so $\\Pr(X=7)=6/36=1/6.$",
+"topic": "probability",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Compute the matrix exponential e^{tA} for A = [[0,-1],[1,0]].",
+"text_solution": "A represents rotation generator J. Powers cycle: A^2 = -I. Then e^{tA} = I + tA + (tA)^2/2! + ... = cos t I + sin t A = [[cos t, -sin t],[sin t, cos t]].",
+"latex_solution": "Since $A^2=-I$, the series yields\\n[e^{tA}=I\\cos t + A\\sin t=\\begin{bmatrix}\\cos t&-\\sin t\\\\\\sin t&\\cos t\\end{bmatrix}.\\]",
+"topic": "linear_algebra",
+"problem_type": "derivation",
+"difficulty": "medium"
+},
+{
+"problem": "Given f(x) = x^3 - 3x, find all critical points and classify them using the second derivative test.",
+"text_solution": "Compute f'(x) = 3x^2 - 3 = 3(x^2 - 1). Critical points at x = ±1. Second derivative f''(x) = 6x. At x=1, f''=6>0 local minimum. At x=-1, f''=-6<0 local maximum.",
+"latex_solution": "We have $f'(x)=3(x^2-1)$, so $x=\\pm 1$ are critical. Since $f''(x)=6x$, $f''(1)=6>0$ (local min) and $f''(-1)=-6<0$ (local max).",
+"topic": "calculus",
+"problem_type": "computation",
+"difficulty": "easy"
+},
+{
+"problem": "Explain and execute one iteration of k-means clustering for two 2D points P1 = (0,0), P2 = (4,0) with initial centroids C1 = (0,1), C2 = (5,0).",
+"text_solution": "Assignment: distance of P1 to C1 is 1, to C2 is 5; assign to C1. Distance of P2 to C1 is √(4^2 + 1^2)=√17, to C2 is 1; assign to C2. Update centroids: C1 becomes mean of {P1} = (0,0), C2 becomes mean of {P2} = (4,0).",
+"latex_solution": "\\section*{One Iteration of $k$-Means}\\n\\begin{itemize}\\n\\item \\textbf{Assign:} $\\|P_1-C_1\\|=1<5=\\|P_1-C_2\\|\\Rightarrow P_1\\to C_1$; $\\|P_2-C_1\\|=\\sqrt{17}>1=\\|P_2-C_2\\|\\Rightarrow P_2\\to C_2$.\\n\\item \\textbf{Update:} $C_1\\leftarrow (0,0)$, $C_2\\leftarrow (4,0)$.\\n\\end{itemize}",
+"topic": "statistics",
+"problem_type": "algorithm",
+"difficulty": "easy"
+}
+]

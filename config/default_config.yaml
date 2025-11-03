@@ -1,0 +1,30 @@
+inference:
+  groq:
+    model: "llama-3.3-70b-versatile"
+    temperature: 0.1
+    max_tokens: 1024
+  
+  local:
+    formatter_model: "mistralai/Mistral-7B-Instruct-v0.2"
+    device: "cuda"
+    temperature: 0.1
+    max_tokens: 2048
+
+agents:
+  rag:
+    inference: "groq"
+    embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+    vector_store: "chroma"
+    chunk_size: 1000
+    chunk_overlap: 200
+    
+  formatter:
+    inference: "local"
+    base_model: "mistralai/Mistral-7B-Instruct-v0.2"
+    fine_tuned_path: "./models/formatter_fine_tuned/final/"
+
+paths:
+  data: "./data"
+  courses: "./courses"
+  models: "./models"
+  outputs: "./outputs"
