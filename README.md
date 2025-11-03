@@ -32,7 +32,6 @@ python app_gradio.py
 ```
 
 ### 6. Access the Application
-- The app will open at: `http://localhost:7860`
 - You can share the public URL provided in the terminal
 
 ## What You'll Get
